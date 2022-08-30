@@ -1,0 +1,43 @@
+/* === 
+1. a footer kivételével minden tartalmat csomagolj be egy konténerbe,
+2. a footernek adj egy fix magasságot, és
+3.számítsd ki a tartalom konténerének magasságát úgy, hogy a viewport teljes magasságából levonod a footer magasságát.
+A calc() függvény ennek a módszernek a sarokköve. Használatával dinamikusan tudod számítani a .content magasságát úgy, hogy kivonod a footer magasságát a teljes viewport magasságából. Így a .content mindig le fogja tolni a footert a viewport legaljára.
+=== */
+
+/*==== FOOTER STYLES ====*/
+
+.content {
+  min-height: calc(100vh - 50px);
+}
+
+.footer {
+  height: 50px;
+}
+
+/*==== HELPER STYLES ====*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #cfcfcf;
+}
+
+.content,
+.footer {
+  padding: 10px;
+  color: rgba(255,255,255, .9);
+  font-family: monospace;
+  font-size: 1.125rem;
+}
+
+.content {
+  background: #ae001d;
+  height: 200px;
+}
+
+.footer {
+  background: #193a6a;
+}

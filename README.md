@@ -1,2 +1,1 @@
-# common-components
-buttons, navbars, headers, footers,
+SOME SIMPLE AND COMMON COMPONENTS

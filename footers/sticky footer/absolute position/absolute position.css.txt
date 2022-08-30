@@ -1,0 +1,64 @@
+/* === Abszolút pozíció megoldás 
+1. Csomagolj mindent (a footert is beleértve) egy divbe.
+2. Célozd meg ezt a csomagolót (wrapper), és állítsd a minimális magasságát 100vh-ra, illetve alkalmazd rá a position: relative; szabályt.
+3. Utána célozd meg a footert magát, és állítsd a pozícióját absolute-ra, majd mozgasd a wrapper aljára.
+4. A wrappernek adj egy alsó paddinget, ez legyen egyenlő a footer magasságával, hogy a tartalom ne csússzon be a footer alá.
+=== */
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px; /* Equals height of the footer and pushes away the content in the case they would touch. */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+/*==== FOOTER STYLES ====*/
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+/*==== HELPER STYLES ====*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #cfcfcf;
+}
+
+.content,
+.footer {
+  padding: 10px;
+  color: rgba(255,255,255, .9);
+  font-family: monospace;
+  font-size: 1.125rem;
+}
+
+.content {
+  background: #ae001d;
+  height: 200px;
+}
+
+.footer {
+  background: #193a6a;
+}
